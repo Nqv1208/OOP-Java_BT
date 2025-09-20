@@ -4,7 +4,8 @@ import java.util.Scanner;
 
 public class Main {
    public static void main(String[] args) {
-      QLCB ql = new QLCB();
+      // Mã sinh viên: 23115053122346
+      QLCB ql_346 = new QLCB();
       Scanner sc = new Scanner(System.in);
       int chon;
 
@@ -19,15 +20,15 @@ public class Main {
 
             switch (chon) {
                case 1:
-                  ql.nhapCanBo();
+                  ql_346.nhapCanBo();
                   break;
                case 2:
                   System.out.print("Nhập tên cần tìm: ");
                   String ten = sc.nextLine();
-                  ql.timKiemTheoTen(ten);
+                  ql_346.timKiemTheoTen(ten);
                   break;
                case 3:
-                  ql.hienThiTatCa();
+                  ql_346.hienThiTatCa();
                   break;
                case 0:
                   System.out.println("Thoát chương trình.");

@@ -28,11 +28,11 @@ public class Nguoi {
 
    public int tinhTuoi() {
       try {
-            DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-            LocalDate birth = LocalDate.parse(ngaySinh, fmt);
-            return Period.between(birth, LocalDate.now()).getYears();
+         DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+         LocalDate birth = LocalDate.parse(ngaySinh, fmt);
+         return Period.between(birth, LocalDate.now()).getYears();
       } catch (Exception e) {
-            return -1; // lỗi định dạng
+         return -1;
       }
    }
 

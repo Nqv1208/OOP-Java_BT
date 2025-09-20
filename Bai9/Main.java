@@ -5,8 +5,9 @@ import java.util.Scanner;
 
 public class Main {
    public static void main(String[] args) {
+      // Mã sinh viên: 23115053122346
       Scanner sc = new Scanner(System.in);
-      ArrayList<TheMuon> ds = new ArrayList<>();
+      ArrayList<TheMuon> ds_346 = new ArrayList<>();
 
       int choice;
       do {
@@ -26,20 +27,20 @@ public class Main {
                         System.out.println("\n--- Nhập thẻ mượn thứ " + (i + 1) + " ---");
                         TheMuon tm = new TheMuon();
                         tm.nhap(sc);
-                        ds.add(tm);
+                        ds_346.add(tm);
                   }
                   break;
                }
                case 2: {
                   System.out.println("\n=== DANH SÁCH THẺ MƯỢN ===");
-                  for (TheMuon tm : ds) {
+                  for (TheMuon tm : ds_346) {
                         tm.hienThi();
                   }
                   break;
                }
                case 3: {
                   System.out.println("\n=== DANH SÁCH TRẢ SÁCH CUỐI THÁNG ===");
-                  for (TheMuon tm : ds) {
+                  for (TheMuon tm : ds_346) {
                         String hanTra = tm.getHanTra();
                         if (hanTra.startsWith("30/") || hanTra.startsWith("31/")) {
                            System.out.println("Sinh viên cần trả sách cuối tháng:");

@@ -4,7 +4,8 @@ import java.util.Scanner;
 
 public class Main {
    public static void main(String[] args) {
-      TuyenSinh ts = new TuyenSinh();
+      // Mã sinh viên: 23115053122346
+      TuyenSinh ts_346 = new TuyenSinh();
       Scanner sc = new Scanner(System.in);
       int chon;
 
@@ -19,15 +20,15 @@ public class Main {
 
             switch (chon) {
                case 1:
-                  ts.nhapThiSinh();
+                  ts_346.nhapThiSinh();
                   break;
                case 2:
-                  ts.hienThiTatCa();
+                  ts_346.hienThiTatCa();
                   break;
                case 3:
                   System.out.print("Nhập số báo danh cần tìm: ");
                   String sbd = sc.nextLine();
-                  ts.timTheoSoBaoDanh(sbd);
+                  ts_346.timTheoSoBaoDanh(sbd);
                   break;
             }
       } while (chon != 0);

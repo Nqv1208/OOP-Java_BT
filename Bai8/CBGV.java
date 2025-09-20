@@ -3,19 +3,16 @@ package Bai8;
 import java.util.Scanner;
 
 public class CBGV extends Nguoi {
-	// thuoc tinh
+	// Thuộc tính
 	private double luongCung;
 	private double thuong;
 	private double phat;
 	private double luongThucLinh;
 
-	// phuong thuc
-	// ham khoi tao khong doi so
-	public CBGV() {
+	public CBGV() {}
 
-	}
-
-	// ham nhap
+	// Phương thức nhập thông tin
+	@Override
 	public void nhapThongTin(Scanner sc) {
 		super.nhapThongTin(sc);
 
@@ -31,11 +28,11 @@ public class CBGV extends Nguoi {
 		phat = sc.nextDouble();
 		sc.nextLine();
 
-		// tinh luong
 		luongThucLinh = luongCung + thuong - phat;
 	}
 
-	// ham hien thi thong tin
+	// Phương thức hiển thị thông tin
+	@Override
 	public void hienThiThongTin() {
 		super.hienThiThongTin();
 
@@ -45,7 +42,7 @@ public class CBGV extends Nguoi {
 		System.out.println("\tLuong thuc linh: " + luongThucLinh);
 	}
 
-	// ham lay ra thong tin ve luong thuc linh
+	// Phương thức lấy ra thông tin về lương thực lĩnh
 	public double getLuongThucLinh() {
 		return luongThucLinh;
 	}

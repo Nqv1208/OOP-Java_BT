@@ -4,46 +4,69 @@ import java.util.Scanner;
 
 public class Main {
    public static void main(String[] args) {
+      // Mã sinh viên: 23115053122346
       Scanner sc = new Scanner(System.in);
-      KhachSan ks = new KhachSan();
+      KhachSan ks_346 = new KhachSan();
+      int choice;
 
-      System.out.print("Nhập số lượng khách trọ: ");
-      int n = Integer.parseInt(sc.nextLine());
+      do {
+            System.out.println("\n===== MENU QUẢN LÝ KHÁCH SẠN =====");
+            System.out.println("1. Nhập thêm khách trọ");
+            System.out.println("2. Hiển thị danh sách khách trọ");
+            System.out.println("3. Tính tiền khách trọ theo CMND");
+            System.out.println("4. Xóa khách trọ theo CMND");
+            System.out.println("5. Thoát");
+            System.out.print("Chọn: ");
+            choice = Integer.parseInt(sc.nextLine());
 
-      for (int i = 0; i < n; i++) {
-            System.out.println("Nhập thông tin khách trọ thứ " + (i + 1));
-            System.out.print("Họ tên: ");
-            String hoTen = sc.nextLine();
-            System.out.print("Ngày sinh: ");
-            String ngaySinh = sc.nextLine();
-            System.out.print("CMND: ");
-            String soCMND = sc.nextLine();
+            switch (choice) {
+               case 1:
+                  System.out.print("Họ tên: ");
+                  String hoTen = sc.nextLine();
+                  System.out.print("Ngày sinh: ");
+                  String ngaySinh = sc.nextLine();
+                  System.out.print("CMND: ");
+                  String soCMND = sc.nextLine();
 
-            System.out.print("Số ngày trọ: ");
-            int soNgayTro = Integer.parseInt(sc.nextLine());
-            System.out.print("Loại phòng: ");
-            String loaiPhong = sc.nextLine();
-            System.out.print("Giá phòng/ngày: ");
-            double giaPhong = Double.parseDouble(sc.nextLine());
+                  System.out.print("Số ngày trọ: ");
+                  int soNgayTro = Integer.parseInt(sc.nextLine());
+                  System.out.print("Loại phòng: ");
+                  String loaiPhong = sc.nextLine();
+                  System.out.print("Giá phòng/ngày: ");
+                  double giaPhong = Double.parseDouble(sc.nextLine());
 
-            Nguoi nguoi = new Nguoi(hoTen, ngaySinh, soCMND);
-            KhachTro khach = new KhachTro(nguoi, soNgayTro, loaiPhong, giaPhong);
-            ks.themKhachTro(khach);
-      }
+                  Nguoi nguoi = new Nguoi(hoTen, ngaySinh, soCMND);
+                  KhachTro khach = new KhachTro(nguoi, soNgayTro, loaiPhong, giaPhong);
+                  ks_346.themKhachTro(khach);
+                  System.out.println(">>> Thêm khách thành công!");
+                  break;
 
-      System.out.println("\n=== DANH SÁCH KHÁCH TRỌ ===");
-      ks.hienThiTatCa();
+               case 2:
+                  System.out.println("\n=== DANH SÁCH KHÁCH TRỌ ===");
+                  ks_346.hienThiTatCa();
+                  break;
 
-      System.out.print("\nNhập CMND khách cần tính tiền: ");
-      String cmnd = sc.nextLine();
-      ks.tinhTienKhachTro(cmnd);
+               case 3:
+                  System.out.print("Nhập CMND khách cần tính tiền: ");
+                  String cmnd = sc.nextLine();
+                  ks_346.tinhTienKhachTro(cmnd);
+                  break;
 
-      System.out.print("\nNhập CMND khách cần xóa: ");
-      String cmndXoa = sc.nextLine();
-      ks.xoaKhachTro(cmndXoa);
+               case 4:
+                  System.out.print("Nhập CMND khách cần xóa: ");
+                  String cmndXoa = sc.nextLine();
+                  ks_346.xoaKhachTro(cmndXoa);
+                  System.out.println(">>> Xóa xong!");
+                  break;
 
-      System.out.println("\n=== DANH SÁCH KHÁCH TRỌ SAU KHI XÓA ===");
-      ks.hienThiTatCa();
+               case 5:
+                  System.out.println("Thoát chương trình.");
+                  break;
+
+               default:
+                  System.out.println("Lựa chọn không hợp lệ, vui lòng chọn lại!");
+            }
+      } while (choice != 5);
 
       sc.close();
    }

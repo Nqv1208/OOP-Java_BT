@@ -4,7 +4,8 @@ import java.util.Scanner;
 
 public class Main {
    public static void main(String[] args) {
-      QuanLySach ql = new QuanLySach();
+      // Mã sinh viên: 23115053122346
+      QuanLySach ql_346 = new QuanLySach();
       Scanner sc = new Scanner(System.in);
       int chon;
       do {
@@ -18,22 +19,22 @@ public class Main {
 
             switch (chon) {
                case 1:
-                  ql.nhapTaiLieu();
+                  ql_346.nhapTaiLieu();
                   break;
                case 2:
                   System.out.print("Nhập mã tài liệu cần tìm: ");
                   String ma = sc.nextLine();
-                  ql.timTheoMa(ma);
+                  ql_346.timTheoMa(ma);
                   break;
                case 3:
                   System.out.println("Chọn loại: 1.Sách  2.Tạp chí  3.Báo");
                   int loai = Integer.parseInt(sc.nextLine());
-                  if (loai == 1) ql.timTheoLoai(Sach.class);
-                  else if (loai == 2) ql.timTheoLoai(TapChi.class);
-                  else if (loai == 3) ql.timTheoLoai(Bao.class);
+                  if (loai == 1) ql_346.timTheoLoai(Sach.class);
+                  else if (loai == 2) ql_346.timTheoLoai(TapChi.class);
+                  else if (loai == 3) ql_346.timTheoLoai(Bao.class);
                   break;
                case 4:
-                  ql.hienThiTatCa();
+                  ql_346.hienThiTatCa();
                   break;
             }
       } while (chon != 0);
